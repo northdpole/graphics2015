@@ -1,4 +1,4 @@
-This is a basic flight simulator written in C++ using OpenGL for the introductory to computer graphics class (CS 418) at University of Illinois.
+This is a basic flight simulator written in C++ using OpenGL for the [introductory computer graphics class (CS 418) at University of Illinois](http://graphics.cs.illinois.edu).
 
 To build on OS X, simply run `make` and execute with `./flightsim`
 
