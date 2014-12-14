@@ -29,18 +29,18 @@
  */
 class VectorOperations
 {
-    
+
 public:
     /**
-     * Multiplies a vector by a float constant. 
+     * Multiplies a vector by a float constant.
      *
      * @note Assumes vector size of 3 (x, y, z).
      * @param vector the vector to be multiplied
      * @param mult the float by which to multipy vector
-     * @return a size 3 GLfloat vector (x, y, z) 
+     * @return a size 3 GLfloat vector (x, y, z)
      */
     GLfloat *mult_v(GLfloat vector[], float mult);
-    
+
     /**
      * Adds two vectors together.
      *
@@ -52,17 +52,17 @@ public:
      * @return a size 3 Glfloat vector (x, y, z)
      */
     GLfloat *add_v(GLfloat first[], GLfloat second[]);
-    
+
     /**
-     * Computes the cross product of two vectors. 
+     * Computes the cross product of two vectors.
      *
      * @note Assumes vector size of 3 (x, y, z).
      * @param first the first operand (size 3 vector)
      * @param second the the second operand (size 3 vector)
-     * @return a size 3 GLfloat vector (x, y, z) 
+     * @return a size 3 GLfloat vector (x, y, z)
      */
     GLfloat *cross_product(GLfloat first[], GLfloat second[]);
-    
+
     /**
      * Computes the 2-norm of a size 3 vector.
      *
@@ -72,13 +72,13 @@ public:
      * @return the paramater's norm, a single float value
      */
     GLdouble norm(GLfloat vector[]);
-    
+
     /**
-     * Computes a size 3 vector's unit vector 
+     * Computes a size 3 vector's unit vector
      *
      * @note Assumes vector size of 3 (x, y, z).
      * @param vector the vector to be normalized
-     * @return a size 3 GLfloat vector (x, y, z) 
+     * @return a size 3 GLfloat vector (x, y, z)
      */
     GLfloat *unit_v(GLfloat vector[]);
 };
