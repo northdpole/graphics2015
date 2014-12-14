@@ -17,7 +17,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+
+#ifdef __APPLE__
 #include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
 #include <OpenGL/gl.h>
 #include <unistd.h>
 #include <math.h>
