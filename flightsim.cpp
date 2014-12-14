@@ -6,7 +6,7 @@
  * @author Paul Lambert <lamber10 @ illinois.edu>
  * @package mp2
  * @note CS418 spring 2012 @ UIUC MP2
- * @see main.h
+ * @see flightsim.h
  */
 
 #include "flightsim.h"
