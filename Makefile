@@ -15,9 +15,18 @@ LINKOPTS = -o
 
 all : $(EXENAME)
 
+# Testing for OS X v Linux
+OS = $(shell uname -s)
+
+ifeq ($(OS), Darwin)
+	LIBS = -framework GLUT -framework OpenGL -framework Cocoa
+else
+	LIBS = -lglut -lGLEW
+endif
+
 # The compiling step
 $(EXENAME) : $(OBJS)
-	$(LINK) $(LINKOPTS) $(EXENAME) $(OBJS) -framework GLUT -framework OpenGL #-lglut -lGLEW
+	$(LINK) $(LINKOPTS) $(EXENAME) $(OBJS) $(LIBS)
 
 # Object files
 flightsim.o : flightsim.cpp
