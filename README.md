@@ -6,6 +6,7 @@ To build on OS X or Linux, simply run `make` and execute with `./flightsim`
 
 To play, you can use either the `arrow keys` or `WASD`.
 The inundation levels can be changed with the `+` and `-` keys.
+The poly size can be increased with `f` and decreased with `c`.
 
 To exit, type `C-c` in your terminal.
 
