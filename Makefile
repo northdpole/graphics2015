@@ -21,7 +21,7 @@ OS = $(shell uname -s)
 ifeq ($(OS), Darwin)
 	LIBS = -framework GLUT -framework OpenGL -framework Cocoa
 else
-	LIBS = -lglut -lGLEW
+	LIBS = -lGL -lGLU -lglut
 endif
 
 # The compiling step
