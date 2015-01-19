@@ -38,9 +38,11 @@ GLfloat up[]   = {0.0, 0.0, 1.0};
 
 GLfloat v_forward[] = {-1, 0, 0};
 GLfloat v_right[]   = {0, 1, 0};
+GLfloat sun_pos[] = {0.5, 0.0, 0.25};
 
 // see plane.h for documentation
 Plane airplane(look, velocity, up, v_forward, v_right);
+Sun sun = *new Sun();
 
 /**********************
  * IMPLEMENTATIONS
@@ -148,6 +150,7 @@ void timerCallBack(int rate)
 
     airplane.move();
 
+
     airplane.getPosition(look);
     airplane.getDestination(dest);
     airplane.getUp(up);
@@ -172,6 +175,10 @@ void display(void)
     glColor3f (1.0, 1.0, 1.0);
     glLoadIdentity ();
 
+
+
+
+    glPushMatrix();
     // replace old gluLookAt
     gluLookAt(look[0], look[1], look[2],
             dest[0], dest[1], dest[2],
@@ -192,16 +199,20 @@ void display(void)
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, seaspec);
     glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 10.0);
 
-    glNormal3f(0.0,0.0,1.0);
 
+
+    //draw sea
     glBegin(GL_QUADS);
     glVertex3f(0.0,0.0,sealevel);
     glVertex3f(1.0,0.0,sealevel);
     glVertex3f(1.0,1.0,sealevel);
     glVertex3f(0.0,1.0,sealevel);
     glEnd();
+    glPopMatrix();
 
-    airplane.display();
+    airplane.display(0.1);
+
+    sun.display();
 
     glutSwapBuffers();
 

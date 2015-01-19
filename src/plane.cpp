@@ -21,10 +21,10 @@ Plane::Plane(GLfloat initial[], float velocity,
     this->v_right = v_right;
 }
 
-void Plane::display()
+void Plane::display(double size)
 {
         //Begin drawing plygon vertex by vertex
-        glBegin (GL_POLYGON);
+      /*  glBegin (GL_POLYGON);
         glEdgeFlag (0);//If mode is set to wireframe, them this edge is not draw
         glVertex3d(1,0,-1);
         glEdgeFlag (1);//if wire frame, this edage is now supposed to be drawn
@@ -48,7 +48,14 @@ void Plane::display()
         glVertex3d(2,0,0);
         glVertex3d(-2,0,0);             
         glEnd();
-
+        */
+	 //draw plane
+	GLfloat xpos = 5,ypos=3,zpos=-9;
+		    glPushMatrix();
+		    xpos = 0;ypos=-0.1;zpos=-0.3;
+		    glTranslatef(xpos,ypos,zpos);
+		   glutSolidTeapot(size);
+		    glPopMatrix();
 
 }
 void Plane::move()

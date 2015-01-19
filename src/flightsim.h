@@ -30,6 +30,7 @@
 #include <math.h>
 
 #include "plane.h"
+#include "Sun.h"
 
 /**********************
  * GLOBALS
@@ -39,6 +40,7 @@ extern float polysize;
 
 extern GLfloat theta;
 
+extern float flickerValue;
 /**********************
  * PROTOTYPES
  *********************/

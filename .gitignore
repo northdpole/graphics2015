@@ -1,3 +1,6 @@
 flightsim
 *.swp
+.project
+.cproject
 *.o
+Debug
