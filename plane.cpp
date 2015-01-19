@@ -21,6 +21,36 @@ Plane::Plane(GLfloat initial[], float velocity,
     this->v_right = v_right;
 }
 
+void Plane::display()
+{
+        //Begin drawing plygon vertex by vertex
+        glBegin (GL_POLYGON);
+        glEdgeFlag (0);//If mode is set to wireframe, them this edge is not draw
+        glVertex3d(1,0,-1);
+        glEdgeFlag (1);//if wire frame, this edage is now supposed to be drawn
+        glVertex3d(6,0,-1);
+        glVertex3d(6,0,0);
+        glVertex3d(1,0,6);
+        glVertex3d(0,0,14);
+        glVertex3d(-3,0,6);
+        glVertex3d(-6,0,0);
+        glEdgeFlag (0); //make edge not visible
+        glVertex3d(-6,0,-1);
+        glEdgeFlag (1);//make edges visible again
+        glVertex3d(-1,0,-1);
+        glVertex3d(-1,0,0);
+        glVertex3d(0,0,0);
+        glVertex3d(1,0,0);      
+        glEnd();
+        glBegin (GL_POLYGON);
+        glVertex3d(-2,0,-7);
+        glVertex3d(2,0,-7);
+        glVertex3d(2,0,0);
+        glVertex3d(-2,0,0);             
+        glEnd();
+
+
+}
 void Plane::move()
 {
     position = wizard->add_v(position, wizard->mult_v(v_forward, velocity));

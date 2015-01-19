@@ -159,6 +159,7 @@ void display(void)
 {
     static GLfloat angle = 0.0;
 
+    
     GLfloat tanamb[]  = {0.2,0.15,0.1,1.0};
     GLfloat tandiff[] = {0.4,0.3,0.2,1.0};
 
@@ -199,6 +200,8 @@ void display(void)
     glVertex3f(1.0,1.0,sealevel);
     glVertex3f(0.0,1.0,sealevel);
     glEnd();
+
+    airplane.display();
 
     glutSwapBuffers();
 

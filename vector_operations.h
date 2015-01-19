@@ -22,7 +22,7 @@
 #include <GL/glut.h>
 #endif
 
-#include <OpenGL/gl.h>
+#include <GL/gl.h>
 #include <unistd.h>
 #include <math.h>
 

@@ -61,6 +61,8 @@ public:
     Plane(GLfloat initial[], float velocity,
           GLfloat v_up[], GLfloat v_forward[], GLfloat v_right[]);
 
+    void display();
+
     /**
      * Calculates the next position of our airplane for our timer
      * callback function, using the addition of our current position
